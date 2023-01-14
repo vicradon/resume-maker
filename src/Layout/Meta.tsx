@@ -1,12 +1,14 @@
 import Head from "next/head";
 const FAVICON_FOLDER = "/favicons";
 
+const origin = "https://orange-dune-006c89910.2.azurestaticapps.net/";
+
 export default function Meta({
   title = `Resume Maker: A website to create your resume in minutes with PDF export`,
   description = `Resume Maker is a website to create your resume in minutes with PDF export. It's free and open source.`,
-  image = `${window.location.origin}/thumbnail.png`,
+  image = `${origin}/thumbnail.png`,
   imageAlt = "OG image AnonMsg application",
-  canonical = `${window.location.origin}`,
+  canonical = `${origin}`,
 }: {
   title?: string;
   description?: string;
@@ -50,10 +52,7 @@ export default function Meta({
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta itemProp="image" content={image} />
-      <meta
-        property="og:logo"
-        content={`${window.location.origin}/logo.png`}
-      ></meta>
+      <meta property="og:logo" content={`${origin}/logo.png`}></meta>
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
