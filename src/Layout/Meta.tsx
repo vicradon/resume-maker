@@ -4,9 +4,9 @@ const FAVICON_FOLDER = "/favicons";
 export default function Meta({
   title = `Resume Maker: A website to create your resume in minutes with PDF export`,
   description = `Resume Maker is a website to create your resume in minutes with PDF export. It's free and open source.`,
-  image = "https://resumewebsite.azurewebsites.com/thumbnail.png",
+  image = `${window.location.origin}/thumbnail.png`,
   imageAlt = "OG image AnonMsg application",
-  canonical = "https://resumewebsite.azurewebsites.com",
+  canonical = `${window.location.origin}`,
 }: {
   title?: string;
   description?: string;
@@ -52,7 +52,7 @@ export default function Meta({
       <meta itemProp="image" content={image} />
       <meta
         property="og:logo"
-        content="https://resumewebsite.azurewebstes.com/logo.png"
+        content={`${window.location.origin}/logo.png`}
       ></meta>
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
